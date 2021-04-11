@@ -1,10 +1,8 @@
-# RP2020 Pico Bootstrap
+# RP2040 Pico Bootstrap
 
-This repository contains my Raspberry Pico project bootstrap files.
+Kickstart your Raspberry Pico project!
 
-It provides a VS Code/Platform IO integration with one-click compilation&uploading.
-
-It also provides a VS Code integrated one-click Openocd/GDB debugging session, for which you only need one Raspberry Pico board.
+Seamless integration with Visual Studio Code. Build & upload your program with only one click. Start an interactive debugging session for which you need only on Pico board.
 
 ![](examples/vs_code_debugging_session.png)
 
@@ -26,6 +24,15 @@ See the file `plattform.io` for more configuration options.
 
 If all is done, you can compile and upload your Pico program with the default PlatformIO steps or by using the icons in your VS code bottom toolbar.
 
+You can also compile the programm with a VS Code task, go to `Terminal -> Run Task -> Pico Build`.
+
+Alternativly, in your shell:
+
+```bash
+cmake -B build -S . -D PICO_BUILD=ON
+make -C build/src
+```
+
 ## Setup for Debugging
 
 First, set these environment variables:
@@ -37,4 +44,13 @@ See `.vscode/launch.json` for more configuration options.
 
 Second, grab the latest [pico debug UF2 file](https://github.com/majbthrd/pico-debug/releases/tag/v10.03) and upload it to your Raspberry Pico.
 
-Third, start the debug compilation by `Terminal -> Run Task -> Debug Build`. When completed, start the debugging session with `Run -> Start Debugging`.
+If you want to start debugging with VS Code, go to `Terminal -> Run Task -> Debug Build`, then  `Run -> Start Debugging`.
+
+Alternativly, in your shell:
+
+```bash
+cmake -B build -S . -D DEBUG_BUILD=ON
+make -C build/src
+```
+
+Then, upload the `build/src/main.elf` into GDB and connect to a running OpenOCD server.
