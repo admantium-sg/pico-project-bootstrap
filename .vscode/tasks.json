@@ -2,9 +2,14 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "Pico Build",
+			"type": "shell",
+			"command": "ls -la ${workspaceRoot}; rm -rvf build; cmake -B build -S . -D PICO_BUILD=ON; make -C build/src "
+		},
+		{
 			"label": "Debug Build",
 			"type": "shell",
-			"command": "ls -la ${workspaceRoot}; rm -rvf debug; mkdir debug; cd debug; cmake -DCMAKE_BUILD_TYPE=Debug -Og ..; make"
+			"command": "ls -la ${workspaceRoot}; rm -rvf build; cmake -B build -S . -D DEBUG_BUILD=ON; make -C build/src"
 		}
 	]
 }
