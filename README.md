@@ -1,12 +1,8 @@
 # RP2040 Pico Bootstrap
 
-Kickstart your Raspberry Pico project! 
+Kickstart your Raspberry Pico project!
 
-This repo provides:
-- Visual Studio Code/Platform IO integration: One click compile & upload your program to the Pico
-- Visual Debugging with Openocd/GDB: Compile a debug version, start the debuggung session 
-
-**For debugging, you only need one Pico board.**
+Seamless integration with Visual Studio Code. Build & upload your program with only one click. Start an interactive debugging session for which you need only on Pico board.
 
 ![](examples/vs_code_debugging_session.png)
 
