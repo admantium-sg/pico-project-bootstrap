@@ -10,8 +10,10 @@ Seamless integration with Visual Studio Code. Build & upload your program with o
 
 To work with this repository, you need to have the following projects up and running:
 
+- [Raspberry Pico SDK v1.20](https://github.com/raspberrypi/pico-sdk/releases)
 - [WizIO Pico](https://github.com/Wiz-IO/wizio-pico/)
-- [Pico Debug](https://github.com/majbthrd/pico-debug)
+
+You also need to set the env var `PICO_SDK_PATH`
 
 ## Setup for Compilation/Upload
 
@@ -35,10 +37,9 @@ make -C build/src
 
 ## Setup for Debugging
 
-First, set these environment variables:
+First, set the following environment variables:
 
 - PICO_OPENOCD_PATH - directory where you downloaded and compiled OpenOCD
-- PICO_DEBUG_SDK_PATH_PATH - directory to the [Pico Debug SDK branch], get it with `git clone https://github.com/majbthrd/pico-sdk.git --branch pll_init`
 
 See `.vscode/launch.json` for more configuration options.
 
