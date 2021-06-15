@@ -4,7 +4,7 @@
 		{
 			"label": "Pico Build",
 			"type": "shell",
-			"command": "ls -la ${workspaceRoot}; rm -rvf build; cmake -B build -S . -D PICO_BUILD=ON; make -C build/src "
+			"command": "ls -la ${workspaceRoot}; rm -rvf build; cmake -B build -S .; make -C build/src "
 		},
 		{
 			"label": "Debug Build",
