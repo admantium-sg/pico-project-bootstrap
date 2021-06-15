@@ -13,7 +13,7 @@ To work with this repository, you need to have the following projects up and run
 - [Raspberry Pico SDK v1.20](https://github.com/raspberrypi/pico-sdk/releases)
 - [WizIO Pico](https://github.com/Wiz-IO/wizio-pico/)
 
-You also need to set the env var `PICO_SDK_PATH`
+You also need to set the env var `PICO_SDK_PATH`.
 
 ## Setup for Compilation/Upload
 
@@ -36,6 +36,13 @@ make -C build/src
 ```
 
 ## Setup for Debugging
+
+You additionally need to have the following tools installed
+
+- [Pico debug project](https://github.com/majbthrd/pico-debug) 
+- [openocd](http://openocd.org/) 
+
+See my [full installation manual](https://admantium.com/blog/pico02_setup_debugging/) for the complete explanation.
 
 First, set the following environment variables:
 
